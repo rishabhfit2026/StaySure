@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# ML artifacts
+*.keras
+*.h5
+*.joblib
+*.npz
+Model/artifacts/*
+!Model/artifacts/.gitkeep
+
+# Dataset files
+Dataset/rooms/*
+!Dataset/rooms/.gitkeep
+Dataset/*.csv
+
+# Node
+node_modules/
+dist/
+build/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+

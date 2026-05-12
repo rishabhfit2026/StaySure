@@ -1,0 +1,22 @@
+services:
+  model-trainer:
+    build:
+      context: .
+      dockerfile: Model/Dockerfile
+    volumes:
+      - ./Dataset:/app/Dataset
+      - ./Model/artifacts:/app/Model/artifacts
+    command:
+      - --csv-path
+      - /app/Dataset/rooms.csv
+      - --image-root
+      - /app/Dataset/rooms
+      - --output-dir
+      - /app/Model/artifacts
+      - --epochs
+      - "25"
+      - --batch-size
+      - "16"
+      - --folds
+      - "5"
+
