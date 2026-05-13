@@ -1,22 +1,120 @@
 id,img1,img2,img3,img4,img5,location,size_sqft,furnishing_type,cleanliness_score,amenities,rent_price,bhk
-1,room1_img1.jpg,room1_img2.jpg,room1_img3.jpg,room1_img4.jpg,,"Kripal Nagar, Bhilai, Chhattisgarh",1200,Semi-furnished,5.8,"Kitchen, Parking, Water Supply",9000,3
-2,room2_img1.jpg,,,,,"M Pocket, Bhilai, Chhattisgarh",950,Semi-furnished,5.0,"CCTV, Parking, Water Supply, Wifi",6000,2
-3,room3_img1.jpg,room3_img2.jpg,room3_img3.jpg,room3_img4.jpg,room3_img5.jpg,"Baikunth Nagar, Bhilai, Chhattisgarh",900,furnished,5.0,Parking,6000,2
-4,room4_img1.jpg,room4_img2.jpg,room4_img3.jpg,,,"Housing Board Colony, Bhilai, Chhattisgarh",500,Semi-furnished,5.0,Parking,5000,1
-5,room5_img1.jpg,room5_img2.jpg,room5_img3.jpg,,,"Jawahar nagar, Bhilai, Chhattisgarh",2400,Semi-furnished,5.0,"Kitchen, Parking",5000,1
-6,room6_img1.jpg,room6_img2.jpg,room6_img3.jpg,room6_img4.jpg,room6_img5.jpg,"Sector 5, Bhilai, Chhattisgarh",700,Unfurnished,5.0,"Parking, Table",6000,1
-7,room7_img1.jpg,room7_img2.jpg,room7_img3.jpg,,,"Housing Board Colony, Bhilai, Chhattisgarh",900,Semi-furnished,5.8,Parking,8499,2
-8,room8_img1.jpg,room8_img2.jpg,room8_img3.jpg,room8_img4.jpg,room8_img5.jpg,"Rajiv Nagar, Bhilai, Chhattisgarh",500,Unfurnished,5.0,Parking,6000,1
-9,room9_img1.jpg,room9_img2.jpg,,,,"Khursipar, Bhilai, Chhattisgarh",600,Unfurnished,5.0,Parking,5000,1
-10,room10_img1.jpg,room10_img2.jpg,room10_img3.jpg,,,"Jawahar nagar, Bhilai, Chhattisgarh",1500,Unfurnished,5.0,"Parking, Water Supply",4000,1
-11,room11_img1.jpg,room11_img2.jpg,room11_img3.jpg,room11_img4.jpg,room11_img5.jpg,"Supela, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,Parking,3000,1
-12,room12_img1.jpg,room12_img2.jpg,room12_img3.jpg,room12_img4.jpg,,"Baikunth Nagar, Bhilai, Chhattisgarh",750,Semi-furnished,5.0,Parking,4500,1
-13,room13_img1.jpg,room13_img2.jpg,room13_img3.jpg,room13_img4.jpg,,"Kripal Nagar, Bhilai, Chhattisgarh",700,furnished,5.0,"Parking, Table",7000,2
-14,room14_img1.jpg,room14_img2.jpg,room14_img3.jpg,room14_img4.jpg,room14_img5.jpg,"Ram nagar, Bhilai, Chhattisgarh",300,Unfurnished,5.0,"Kitchen, Parking",3500,2
-15,room15_img1.jpg,room15_img2.jpg,room15_img3.jpg,,,"Ram nagar, Bhilai, Chhattisgarh",500,Semi-furnished,5.0,"Kitchen, Parking",2500,1
-16,room16_img1.jpg,room16_img2.jpg,room16_img3.jpg,,,"Supela, Bhilai, Chhattisgarh",350,Unfurnished,5.0,"Attached Bathroom, Kitchen, Parking, Water Supply",4500,Unknown
-17,room17_img1.jpg,room17_img2.jpg,room17_img3.jpg,room17_img4.jpg,,"Vaishali Nagar, Bhilai, Chhattisgarh",2000,furnished,5.0,"Kitchen, Parking",6000,1
-18,room18_img1.jpg,room18_img2.jpg,room18_img3.jpg,room18_img4.jpg,room18_img5.jpg,"Kripal Nagar, Bhilai, Chhattisgarh",1500,Unfurnished,5.0,Parking,7800,2
-19,room19_img1.jpg,room19_img2.jpg,room19_img3.jpg,room19_img4.jpg,room19_img5.jpg,"Vaishali Nagar, Bhilai, Chhattisgarh",1500,Unfurnished,5.0,Parking,7000,2
-20,room20_img1.jpg,room20_img2.jpg,,,,"Supele Market, Bhilai, Chhattisgarh",160,Semi-furnished,5.0,Parking,4000,1
-21,room21_img1.jpg,,,,,"Jawahar nagar, Bhilai, Chhattisgarh",1500,furnished,5.0,"Bed, Parking, Table, Water Supply",2600,1
+1,room1_img1.jpg,room1_img2.jpg,room1_img3.jpg,room1_img4.jpg,room1_img5.jpg,"Kripal Nagar, Bhilai, Chhattisgarh",1200,Semi-furnished,5.8,"Kitchen, Parking, Water Supply",9000,3
+2,room2_img1.jpg,room2_img2.jpg,room2_img3.jpg,room2_img4.jpg,,"Jawahar nagar, Bhilai, Chhattisgarh",2400,Semi-furnished,5.0,"Kitchen, Parking",5000,1
+3,room3_img1.jpg,room3_img2.jpg,room3_img3.jpg,room3_img4.jpg,room3_img5.jpg,"Sector 5, Bhilai, Chhattisgarh",700,Unfurnished,5.0,"Parking, Table",6000,1
+4,room4_img1.jpg,room4_img2.jpg,room4_img3.jpg,room4_img4.jpg,room4_img5.jpg,"Jamul, Bhilai, Chhattisgarh",350,Unfurnished,5.0,"Kitchen, Parking",3500,1
+5,room5_img1.jpg,room5_img2.jpg,room5_img3.jpg,room5_img4.jpg,room5_img5.jpg,"Supela, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,Parking,3000,1
+6,room6_img1.jpg,,,,,"Housing Board Colony, Bhilai, Chhattisgarh",350,Semi-furnished,5.0,Parking,3500,1
+7,room7_img1.jpg,room7_img2.jpg,room7_img3.jpg,room7_img4.jpg,room7_img5.jpg,"Ram nagar, Bhilai, Chhattisgarh",300,Unfurnished,5.0,"Kitchen, Parking",3500,2
+8,room8_img1.jpg,room8_img2.jpg,room8_img3.jpg,,,"Ram nagar, Bhilai, Chhattisgarh",500,Semi-furnished,5.0,"Kitchen, Parking",2500,1
+9,room9_img1.jpg,room9_img2.jpg,room9_img3.jpg,room9_img4.jpg,room9_img5.jpg,"Supela, Bhilai, Chhattisgarh",350,Unfurnished,5.0,"Attached Bathroom, Kitchen, Parking, Water Supply",4500,Unknown
+10,room10_img1.jpg,room10_img2.jpg,room10_img3.jpg,room10_img4.jpg,room10_img5.jpg,"Vaishali Nagar, Bhilai, Chhattisgarh",2000,furnished,5.0,"Kitchen, Parking",6000,1
+11,room11_img1.jpg,room11_img2.jpg,room11_img3.jpg,room11_img4.jpg,room11_img5.jpg,"Kripal Nagar, Bhilai, Chhattisgarh",1500,Unfurnished,5.0,Parking,7800,2
+12,room12_img1.jpg,room12_img2.jpg,room12_img3.jpg,,,"Supele Market, Bhilai, Chhattisgarh",160,Semi-furnished,5.0,Parking,4000,1
+13,room13_img1.jpg,,,,,"Jawahar nagar, Bhilai, Chhattisgarh",1500,furnished,5.0,"Bed, Parking, Table, Water Supply",2600,1
+14,room14_img1.jpg,room14_img2.jpg,,,,"Maroda Tank, Bhilai, Chhattisgarh",1500,furnished,5.0,Parking,2500,1
+15,room15_img1.jpg,room15_img2.jpg,room15_img3.jpg,room15_img4.jpg,,"Maitri Kunj, Bhilai, Chhattisgarh",300,Semi-furnished,5.0,"Parking, Water Supply",8500,1
+16,room16_img1.jpg,room16_img2.jpg,room16_img3.jpg,room16_img4.jpg,room16_img5.jpg,"Risali, Bhilai, Chhattisgarh",3600,Semi-furnished,5.8,"Bed, Parking, Table, Water Supply",3351,Unknown
+17,room17_img1.jpg,,,,,"Smriti Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,Parking,3500,2
+18,room18_img1.jpg,,,,,"Smriti Nagar, Bhilai, Chhattisgarh",85459,furnished,5.0,,3500,3
+19,room19_img1.jpg,,,,,"Katulbod, Durg, Chhattisgarh",200,Semi-furnished,5.0,"Parking, Water Supply",2500,1
+20,room20_img1.jpg,room20_img2.jpg,room20_img3.jpg,,,"Nehru Nagar, Bhilai, Chhattisgarh",1500,Unfurnished,5.0,Parking,3700,1
+21,room21_img1.jpg,,,,,"Radhika Nagar, Bhilai, Chhattisgarh",300,Semi-furnished,5.0,"Kitchen, Parking",3800,1
+22,room22_img1.jpg,room22_img2.jpg,room22_img3.jpg,room22_img4.jpg,,"Padmanabhpur, Durg, Chhattisgarh",500,Semi-furnished,5.0,"Bed, Parking",2700,1
+23,room23_img1.jpg,room23_img2.jpg,room23_img3.jpg,room23_img4.jpg,room23_img5.jpg,"Daya Nagar, Bhilai, Chhattisgarh",1250,Unfurnished,5.0,"Bed, Kitchen, Parking",5000,3
+24,room24_img1.jpg,room24_img2.jpg,room24_img3.jpg,,,"Nehru Nagar, Bhilai, Chhattisgarh",2588,Unfurnished,5.0,,5000,3
+25,room25_img1.jpg,room25_img2.jpg,room25_img3.jpg,room25_img4.jpg,room25_img5.jpg,"Junwani, Bhilai, Chhattisgarh",369,Unfurnished,5.0,Parking,3000,3
+26,room26_img1.jpg,room26_img2.jpg,room26_img3.jpg,room26_img4.jpg,room26_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",2000,Semi-furnished,5.0,Parking,2900,4
+27,room27_img1.jpg,room27_img2.jpg,room27_img3.jpg,room27_img4.jpg,room27_img5.jpg,"Nehru Nagar, Bhilai, Chhattisgarh",200,Semi-furnished,5.8,"Attached Bathroom, Kitchen, Parking, Table, Water Supply",4000,1
+28,room28_img1.jpg,room28_img2.jpg,room28_img3.jpg,room28_img4.jpg,room28_img5.jpg,"Surya Residence Apartment, Bhilai, Chhattisgarh",30,Semi-furnished,5.0,Parking,5000,2
+29,room29_img1.jpg,room29_img2.jpg,,,,"Hari Nagar, Durg, Chhattisgarh",600,Unfurnished,5.0,"Attached Bathroom, Kitchen, Parking",4500,1
+30,room30_img1.jpg,room30_img2.jpg,room30_img3.jpg,room30_img4.jpg,room30_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",1700,furnished,5.0,,4000,1
+31,room31_img1.jpg,room31_img2.jpg,room31_img3.jpg,room31_img4.jpg,room31_img5.jpg,"Nehru Nagar, Bhilai, Chhattisgarh",0,Unfurnished,5.0,,3750,4
+32,room32_img1.jpg,room32_img2.jpg,,,,"Kohka Colony, Bhilai, Chhattisgarh",1500,Semi-furnished,5.0,Parking,2800,1
+33,room33_img1.jpg,room33_img2.jpg,room33_img3.jpg,room33_img4.jpg,room33_img5.jpg,"Ruabandha, Bhilai, Chhattisgarh",356,Semi-furnished,5.0,Parking,5000,1
+34,room34_img1.jpg,room34_img2.jpg,room34_img3.jpg,room34_img4.jpg,room34_img5.jpg,"Adarsh Nagar, Durg, Chhattisgarh",800,Semi-furnished,5.0,Parking,2000,3
+35,room35_img1.jpg,room35_img2.jpg,room35_img3.jpg,room35_img4.jpg,room35_img5.jpg,"Muktanagar, Durg, Chhattisgarh",900,furnished,5.8,Parking,2500,2
+36,room36_img1.jpg,room36_img2.jpg,room36_img3.jpg,room36_img4.jpg,,"Smriti Nagar, Bhilai, Chhattisgarh",500,Semi-furnished,5.8,Parking,2050,1
+37,room37_img1.jpg,room37_img2.jpg,room37_img3.jpg,room37_img4.jpg,room37_img5.jpg,"Vishwa Bank Housing Board Colony, Bhilai, Chhattisgarh",1000,Semi-furnished,5.8,"Parking, Table",4500,1
+38,room38_img1.jpg,room38_img2.jpg,room38_img3.jpg,room38_img4.jpg,room38_img5.jpg,"Minakshi Nagar, Durg-Bhilainagar, Chhattisgarh",28,Semi-furnished,5.0,Parking,5000,1
+39,room39_img1.jpg,room39_img2.jpg,room39_img3.jpg,room39_img4.jpg,room39_img5.jpg,"Daya Nagar, Bhilai, Chhattisgarh",1800,Unfurnished,5.0,"Attached Bathroom, Bed, Kitchen, Parking, Table",2500,Unknown
+40,room40_img1.jpg,room40_img2.jpg,,,,"Surya Vihar, Bhilai, Chhattisgarh",600,furnished,5.0,"Kitchen, Parking",6000,1
+41,room41_img1.jpg,,,,,"Smriti Nagar, Bhilai, Chhattisgarh",10,Unfurnished,5.0,"Kitchen, Parking, Table",3000,3
+42,room42_img1.jpg,room42_img2.jpg,room42_img3.jpg,room42_img4.jpg,room42_img5.jpg,"Kurud, Bhilai, Chhattisgarh",300,Semi-furnished,5.0,"Kitchen, Parking",3700,1
+43,room43_img1.jpg,room43_img2.jpg,room43_img3.jpg,,,"Nehru Nagar, Bhilai, Chhattisgarh",1208,furnished,5.8,"Attached Bathroom, Bed, Fridge, Kitchen, Parking, Wifi",8000,3
+44,room44_img1.jpg,,,,,"Junwani, Bhilai, Chhattisgarh",3500,Unfurnished,5.0,Parking,2500,2
+45,room45_img1.jpg,room45_img2.jpg,,,,"Nehru Nagar, Bhilai, Chhattisgarh",800,Semi-furnished,5.0,Parking,2000,1
+46,room46_img1.jpg,room46_img2.jpg,room46_img3.jpg,room46_img4.jpg,,"Ispat Nagar, Bhilai, Chhattisgarh",180,furnished,5.0,Parking,4000,1
+47,room47_img1.jpg,,,,,"Junwani, Bhilai, Chhattisgarh",1000,Unfurnished,5.0,Parking,3250,2
+48,room48_img1.jpg,room48_img2.jpg,,,,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",2000,Semi-furnished,5.0,Parking,2000,2
+49,room49_img1.jpg,,,,,"Chauhan Town, Bhilai, Chhattisgarh",0,Unfurnished,5.0,"Attached Bathroom, Parking",2000,3
+50,room50_img1.jpg,room50_img2.jpg,room50_img3.jpg,room50_img4.jpg,room50_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",200,Semi-furnished,5.0,Parking,5000,1
+51,room51_img1.jpg,,,,,"Ganesh Nagar, Bhilai, Chhattisgarh",0,Unknown,5.0,Parking,1250,Unknown
+52,room52_img1.jpg,room52_img2.jpg,room52_img3.jpg,,,"Shanti Nagar, Bhilai, Chhattisgarh",200,furnished,5.0,"Bed, CCTV, Kitchen, Parking, Security, Table, Water Supply, Wifi",3400,1
+53,room53_img1.jpg,room53_img2.jpg,room53_img3.jpg,,,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",150,Semi-furnished,5.0,Parking,5000,1
+54,room54_img1.jpg,,,,,"Nehru Nagar, Bhilai, Chhattisgarh",400,Semi-furnished,5.0,,6000,1
+55,room55_img1.jpg,room55_img2.jpg,,,,"Junwani, Bhilai, Chhattisgarh",2000,Semi-furnished,5.0,Parking,3500,3
+56,room56_img1.jpg,,,,,"Kohka Colony, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Bed, Parking",3000,2
+57,room57_img1.jpg,room57_img2.jpg,room57_img3.jpg,room57_img4.jpg,room57_img5.jpg,"Borsi Nagar, Durg, Chhattisgarh",1000,Unfurnished,5.0,Parking,3000,1
+58,room58_img1.jpg,,,,,"Hudco, Bhilai, Chhattisgarh",3000,furnished,5.0,"Bed, Parking, Sofa, Table",3000,3
+59,room59_img1.jpg,room59_img2.jpg,,,,"Kurud, Bhilai, Chhattisgarh",1000,Semi-furnished,5.0,Parking,3000,1
+60,room60_img1.jpg,,,,,"Chauhan Town, Bhilai, Chhattisgarh",3000,Unfurnished,5.0,Parking,3000,Unknown
+61,room61_img1.jpg,,,,,"Chauhan Town, Bhilai, Chhattisgarh",3000,Unfurnished,5.0,Parking,3000,Unknown
+62,room62_img1.jpg,room62_img2.jpg,room62_img3.jpg,room62_img4.jpg,room62_img5.jpg,"Hudco, Bhilai, Chhattisgarh",1100,Unfurnished,5.0,Parking,14000,2
+63,room63_img1.jpg,room63_img2.jpg,room63_img3.jpg,room63_img4.jpg,,"Junwani, Bhilai, Chhattisgarh",999,Unfurnished,5.0,Parking,3000,3
+64,room64_img1.jpg,room64_img2.jpg,room64_img3.jpg,room64_img4.jpg,room64_img5.jpg,"Hanuman Nagar, Durg, Chhattisgarh",300,furnished,5.0,"Bed, Fridge, Parking, Sofa, Table, Washing Machine, Water Supply",6000,1
+65,room65_img1.jpg,,,,,"Junwani, Bhilai, Chhattisgarh",999,Semi-furnished,5.0,"Attached Bathroom, Parking",3000,1
+66,room66_img1.jpg,room66_img2.jpg,room66_img3.jpg,room66_img4.jpg,room66_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",150,furnished,5.0,"Attached Bathroom, Parking, Table, Water Supply",4000,1
+67,room67_img1.jpg,room67_img2.jpg,,,,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",1000,Semi-furnished,5.0,Parking,8000,2
+68,room68_img1.jpg,,,,,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Bed, Parking, Table",4500,2
+69,room69_img1.jpg,,,,,"Mahadev Colony, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,Parking,4000,2
+70,room70_img1.jpg,,,,,Sharing room for girl near dominoz new adarsh nagar durg,0,Semi-furnished,5.0,Parking,2500,1
+71,room71_img1.jpg,,,,,"Smriti Nagar, Bhilai, Chhattisgarh",800,Semi-furnished,5.0,Parking,6000,1
+72,room72_img1.jpg,,,,,"Shivaji Nagar, Bhilai, Chhattisgarh",2000,furnished,5.0,Parking,6000,2
+73,room73_img1.jpg,room73_img2.jpg,,,,"Smriti Nagar, Bhilai, Chhattisgarh",1000,Semi-furnished,4.0,"Parking, Table, Water Supply",5000,3
+74,room74_img1.jpg,room74_img2.jpg,,,,"Junwani, Bhilai, Chhattisgarh",2000,Semi-furnished,5.0,Parking,6000,1
+75,room75_img1.jpg,room75_img2.jpg,room75_img3.jpg,,,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",700,Unfurnished,5.0,Parking,7000,3
+76,room76_img1.jpg,room76_img2.jpg,room76_img3.jpg,room76_img4.jpg,,"Smriti Nagar, Bhilai, Chhattisgarh",500,Semi-furnished,5.8,"Kitchen, Parking, Water Supply",5000,2
+77,room77_img1.jpg,room77_img2.jpg,room77_img3.jpg,room77_img4.jpg,,"Chauhan Town, Bhilai, Chhattisgarh",150,Unfurnished,5.0,Parking,7500,2
+78,room78_img1.jpg,,,,,"Arya Nagar Near Buddha Vihar, Durg, Chhattisgarh",700,Unfurnished,5.0,"Kitchen, Parking",4700,1
+79,room79_img1.jpg,room79_img2.jpg,,,,"Mahesh Colony, Durg, Chhattisgarh",0,Semi-furnished,5.0,,4000,2
+80,room80_img1.jpg,room80_img2.jpg,room80_img3.jpg,room80_img4.jpg,,Om nagar urla durg,500,Semi-furnished,5.0,"Parking, Water Supply",3000,2
+81,room81_img1.jpg,room81_img2.jpg,room81_img3.jpg,room81_img4.jpg,room81_img5.jpg,"Harna Bandha, Durg, Chhattisgarh",1500,Unfurnished,5.0,Parking,5000,1
+82,room82_img1.jpg,,,,,"Hasharidih Durg, Durg, Chhattisgarh",1800,Semi-furnished,5.0,Parking,3000,1
+83,room83_img1.jpg,room83_img2.jpg,room83_img3.jpg,room83_img4.jpg,room83_img5.jpg,"Shanti Nagar, Bhilai, Chhattisgarh",0,Unfurnished,5.0,Parking,2500,Unknown
+84,room84_img1.jpg,room84_img2.jpg,room84_img3.jpg,room84_img4.jpg,,"Risali Village, Bhilai, Chhattisgarh",0,furnished,5.0,Parking,5000,Unknown
+85,room85_img1.jpg,room85_img2.jpg,room85_img3.jpg,room85_img4.jpg,room85_img5.jpg,"Kohka Colony, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Bed, Fan, Fridge, Kitchen, Parking, Table",2900,Unknown
+86,room86_img1.jpg,room86_img2.jpg,room86_img3.jpg,room86_img4.jpg,room86_img5.jpg,"Shanti Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.8,"Bed, Fridge, Parking, Security",2500,Unknown
+87,room87_img1.jpg,room87_img2.jpg,room87_img3.jpg,room87_img4.jpg,room87_img5.jpg,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Kitchen, Parking, Security, Table, Water Supply",1000,Unknown
+88,room88_img1.jpg,,,,,"Laxmi Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,Parking,2222,Unknown
+89,room89_img1.jpg,,,,,"Risali, Bhilai, Chhattisgarh",0,Unfurnished,5.0,,8500,1
+90,room90_img1.jpg,room90_img2.jpg,room90_img3.jpg,room90_img4.jpg,room90_img5.jpg,"Maitri Kunj, Bhilai, Chhattisgarh",0,furnished,5.0,Parking,6000,Unknown
+91,room91_img1.jpg,room91_img2.jpg,room91_img3.jpg,room91_img4.jpg,room91_img5.jpg,"Pragati Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Bed, Parking, Table, Water Supply, Wifi",3500,Unknown
+92,room92_img1.jpg,room92_img2.jpg,room92_img3.jpg,,,"Pushpak Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.8,"Attached Bathroom, Bed, Parking, Table",2700,Unknown
+93,room93_img1.jpg,room93_img2.jpg,room93_img3.jpg,room93_img4.jpg,room93_img5.jpg,"Junwani, Bhilai, Chhattisgarh",0,furnished,5.8,"CCTV, Kitchen, Parking, Security, Table, Water Supply, Wifi",6999,Unknown
+94,room94_img1.jpg,room94_img2.jpg,room94_img3.jpg,room94_img4.jpg,room94_img5.jpg,"Anand Vihar, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Attached Bathroom, Kitchen, Parking",3600,Unknown
+95,room95_img1.jpg,room95_img2.jpg,,,,"Junwani, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Attached Bathroom, Kitchen, Parking, Water Supply, Wifi",2200,Unknown
+96,room96_img1.jpg,room96_img2.jpg,room96_img3.jpg,room96_img4.jpg,room96_img5.jpg,"Nehru Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,6.6,"Bed, Parking, Security, Table, Water Supply",2700,Unknown
+97,room97_img1.jpg,room97_img2.jpg,room97_img3.jpg,,,"Puspak Nagar, Bhilai, Chhattisgarh",0,furnished,4.0,"Parking, Water Supply",2200,Unknown
+98,room98_img1.jpg,room98_img2.jpg,room98_img3.jpg,room98_img4.jpg,room98_img5.jpg,"Nehru Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Bed, Parking, Table",5000,Unknown
+99,room99_img1.jpg,room99_img2.jpg,room99_img3.jpg,room99_img4.jpg,room99_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Parking, Table, Water Supply",2500,Unknown
+100,room100_img1.jpg,room100_img2.jpg,room100_img3.jpg,room100_img4.jpg,room100_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"Kitchen, Parking, Security, Table, Water Supply",2500,Unknown
+101,room101_img1.jpg,,,,,"Kurud, Bhilai, Chhattisgarh",0,furnished,5.0,Parking,1499,Unknown
+102,room102_img1.jpg,room102_img2.jpg,,,,"Ispat Nagar, Bhilai, Chhattisgarh",0,Unknown,5.0,Parking,2500,Unknown
+103,room103_img1.jpg,room103_img2.jpg,room103_img3.jpg,room103_img4.jpg,room103_img5.jpg,"Patan, Bhilai, Chhattisgarh",0,furnished,5.8,"Fridge, Kitchen, Parking, Security, Table, Wifi",2600,Unknown
+104,room104_img1.jpg,room104_img2.jpg,,,,"Risali, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"AC, Attached Bathroom, Fridge, Table",8000,Unknown
+105,room105_img1.jpg,room105_img2.jpg,room105_img3.jpg,room105_img4.jpg,room105_img5.jpg,"Kohka Colony, Bhilai, Chhattisgarh",0,Semi-furnished,5.8,"Attached Bathroom, Fridge, Parking, Washing Machine, Water Supply, Wifi",8000,Unknown
+106,room106_img1.jpg,room106_img2.jpg,room106_img3.jpg,,,"Nehru Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,"AC, Fridge, Parking, Security, Water Supply",2500,Unknown
+107,room107_img1.jpg,,,,,"Patan, Bhilai, Chhattisgarh",0,Unknown,5.0,"Kitchen, Parking",3000,Unknown
+108,room108_img1.jpg,room108_img2.jpg,room108_img3.jpg,room108_img4.jpg,,"Pragati Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Attached Bathroom, Bed, Table, Water Supply",3500,1
+109,room109_img1.jpg,room109_img2.jpg,room109_img3.jpg,room109_img4.jpg,room109_img5.jpg,"Baghera, Durg, Chhattisgarh",0,furnished,5.0,"Parking, Water Supply",3000,Unknown
+110,room110_img1.jpg,room110_img2.jpg,room110_img3.jpg,room110_img4.jpg,,"Shikshak Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,,3000,Unknown
+111,room111_img1.jpg,room111_img2.jpg,room111_img3.jpg,room111_img4.jpg,room111_img5.jpg,"address - Gupta girls PG , infront of old water tank , budhha vihar ke backside , arya nagar durg (c.g.)",0,furnished,4.0,"Parking, Water Supply",1600,Unknown
+112,room112_img1.jpg,room112_img2.jpg,,,,"Sector 6, Bhilai, Chhattisgarh",0,Semi-furnished,5.0,Parking,1000,Unknown
+113,room113_img1.jpg,room113_img2.jpg,room113_img3.jpg,room113_img4.jpg,room113_img5.jpg,"Ayyapa Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Parking, Table, Washing Machine",2500,Unknown
+114,room114_img1.jpg,room114_img2.jpg,room114_img3.jpg,room114_img4.jpg,room114_img5.jpg,"Anand Nagar Near Puspak Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"AC, Parking, Water Supply, Wifi",7500,Unknown
+115,room115_img1.jpg,room115_img2.jpg,room115_img3.jpg,,,"Maitri Nagar, Bhilai, Chhattisgarh",0,furnished,5.0,"Attached Bathroom, Parking",2800,Unknown
+116,room116_img1.jpg,room116_img2.jpg,room116_img3.jpg,,,"Shanti Nagar, Bhilai, Chhattisgarh",0,Unfurnished,5.0,"Parking, Water Supply",1000,Unknown
+117,room117_img1.jpg,,,,,"State Bank Colony Near Sector 7, Bhilai, Chhattisgarh",0,furnished,5.0,"Bed, Parking",2000,Unknown
+118,room118_img1.jpg,room118_img2.jpg,room118_img3.jpg,room118_img4.jpg,room118_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.8,"Kitchen, Parking",3500,1
+119,room119_img1.jpg,,,,,"Agarsen Chowk, Durg-Bhilainagar, Chhattisgarh",0,furnished,5.0,"Fridge, Kitchen, Parking",2000,1

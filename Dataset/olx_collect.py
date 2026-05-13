@@ -72,17 +72,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--start-url",
-        default="https://www.olx.in/bhilai_g4059463/for-rent-houses-apartments_c1723",
-        help="OLX category/search URL to collect from.",
+        action="append",
+        default=None,
+        help="OLX category/search URL to collect from. Pass multiple times to merge regions/searches.",
     )
     parser.add_argument("--max-listings", type=int, default=100)
     parser.add_argument("--start-id", type=int, default=1)
+    parser.add_argument("--links-input", type=Path, default=None)
+    parser.add_argument("--links-output", type=Path, default=None)
+    parser.add_argument("--links-only", action="store_true")
     parser.add_argument("--output-csv", type=Path, default=Path("Dataset/rooms_dataset.csv"))
     parser.add_argument("--output-xlsx", type=Path, default=None)
     parser.add_argument("--image-dir", type=Path, default=Path("Dataset/rooms"))
     parser.add_argument("--download-images", action="store_true")
     parser.add_argument("--headful", action="store_true", help="Show the browser while collecting.")
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between listing pages.")
+    parser.add_argument("--page-wait-ms", type=int, default=2500, help="Max wait after opening each listing page.")
     parser.add_argument(
         "--room-only",
         action=argparse.BooleanOptionalAction,
@@ -130,12 +135,23 @@ def main() -> None:
         )
         page = context.new_page()
 
-        links = collect_listing_links(page, args.start_url, args.max_listings, PlaywrightTimeoutError)
+        if args.links_input:
+            links = read_links(args.links_input)[: args.max_listings]
+            print(f"Loaded {len(links)} listing links from {args.links_input}")
+        else:
+            start_urls = normalize_start_urls(args.start_url)
+            links = collect_listing_links(page, start_urls, args.max_listings, PlaywrightTimeoutError)
+        if args.links_output:
+            write_links(args.links_output, links)
+            print(f"Wrote {len(links)} listing links to {args.links_output}")
+        if args.links_only:
+            browser.close()
+            return
         rows = []
         for offset, url in enumerate(links):
             print(f"[{offset + 1}/{len(links)}] {url}")
             try:
-                listing = collect_listing(page, url, PlaywrightTimeoutError)
+                listing = collect_listing(page, url, PlaywrightTimeoutError, args.page_wait_ms)
             except Exception as exc:  # noqa: BLE001 - keep long collection jobs moving.
                 print(f"  skipped: {exc}")
                 continue
@@ -165,41 +181,62 @@ def main() -> None:
         print(f"Wrote spreadsheet to {args.output_xlsx}")
 
 
-def collect_listing_links(page: Any, start_url: str, limit: int, timeout_error: type[Exception]) -> list[str]:
-    print(f"Opening {start_url}")
-    safe_goto(page, start_url, timeout=60_000)
+def normalize_start_urls(value: str | list[str]) -> list[str]:
+    if value is None:
+        return ["https://www.olx.in/bhilai_g4059463/for-rent-houses-apartments_c1723"]
+    if isinstance(value, str):
+        return [value]
+    return value
+
+
+def read_links(path: Path) -> list[str]:
+    return [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def write_links(path: Path, links: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(links) + "\n", encoding="utf-8")
+
+
+def collect_listing_links(page: Any, start_urls: list[str], limit: int, timeout_error: type[Exception]) -> list[str]:
     links: list[str] = []
     seen = set()
-    idle_rounds = 0
+    for start_url in start_urls:
+        if len(links) >= limit:
+            break
+        print(f"Opening {start_url}")
+        safe_goto(page, start_url, timeout=60_000)
+        idle_rounds = 0
 
-    while len(links) < limit and idle_rounds < 8:
-        before = len(links)
-        for href in page.eval_on_selector_all("a[href]", "(nodes) => nodes.map((node) => node.href)"):
-            if not is_listing_url(href):
-                continue
-            normalized = normalize_url(href)
-            if normalized in seen:
-                continue
-            seen.add(normalized)
-            links.append(normalized)
-            if len(links) >= limit:
-                break
+        while len(links) < limit and idle_rounds < 8:
+            before = len(links)
+            for href in page.eval_on_selector_all("a[href]", "(nodes) => nodes.map((node) => node.href)"):
+                if not is_listing_url(href):
+                    continue
+                normalized = normalize_url(href)
+                if normalized in seen:
+                    continue
+                seen.add(normalized)
+                links.append(normalized)
+                if len(links) >= limit:
+                    break
 
-        try:
-            page.get_by_text(re.compile(r"load more|show more", re.I)).click(timeout=1200)
-        except timeout_error:
-            page.mouse.wheel(0, 2600)
-            page.wait_for_timeout(1200)
+            try:
+                page.get_by_text(re.compile(r"load more|show more", re.I)).click(timeout=1200)
+            except timeout_error:
+                page.mouse.wheel(0, 2600)
+                page.wait_for_timeout(1200)
 
-        idle_rounds = idle_rounds + 1 if len(links) == before else 0
+            idle_rounds = idle_rounds + 1 if len(links) == before else 0
+        print(f"  collected {len(links)} unique listing links so far")
 
     return links[:limit]
 
 
-def collect_listing(page: Any, url: str, timeout_error: type[Exception]) -> Listing:
+def collect_listing(page: Any, url: str, timeout_error: type[Exception], page_wait_ms: int = 2500) -> Listing:
     safe_goto(page, url, timeout=60_000)
     try:
-        page.wait_for_load_state("networkidle", timeout=8_000)
+        page.wait_for_load_state("networkidle", timeout=page_wait_ms)
     except timeout_error:
         pass
 
