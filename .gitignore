@@ -17,6 +17,7 @@ Model/artifacts/*
 Dataset/rooms/*
 !Dataset/rooms/.gitkeep
 Dataset/*.csv
+Dataset/*.xlsx
 
 # Node
 node_modules/
@@ -27,4 +28,3 @@ build/
 .DS_Store
 .idea/
 .vscode/
-
