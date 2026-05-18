@@ -89,6 +89,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between listing pages.")
     parser.add_argument("--page-wait-ms", type=int, default=2500, help="Max wait after opening each listing page.")
     parser.add_argument(
+        "--start-page-timeout-ms",
+        type=int,
+        default=60_000,
+        help="Max wait when opening a city/category page before trying the next URL.",
+    )
+    parser.add_argument(
         "--room-only",
         action=argparse.BooleanOptionalAction,
         default=True,
@@ -140,7 +146,13 @@ def main() -> None:
             print(f"Loaded {len(links)} listing links from {args.links_input}")
         else:
             start_urls = normalize_start_urls(args.start_url)
-            links = collect_listing_links(page, start_urls, args.max_listings, PlaywrightTimeoutError)
+            links = collect_listing_links(
+                page,
+                start_urls,
+                args.max_listings,
+                PlaywrightTimeoutError,
+                args.start_page_timeout_ms,
+            )
         if args.links_output:
             write_links(args.links_output, links)
             print(f"Wrote {len(links)} listing links to {args.links_output}")
@@ -198,14 +210,24 @@ def write_links(path: Path, links: list[str]) -> None:
     path.write_text("\n".join(links) + "\n", encoding="utf-8")
 
 
-def collect_listing_links(page: Any, start_urls: list[str], limit: int, timeout_error: type[Exception]) -> list[str]:
+def collect_listing_links(
+    page: Any,
+    start_urls: list[str],
+    limit: int,
+    timeout_error: type[Exception],
+    start_page_timeout_ms: int = 60_000,
+) -> list[str]:
     links: list[str] = []
     seen = set()
     for start_url in start_urls:
         if len(links) >= limit:
             break
         print(f"Opening {start_url}")
-        safe_goto(page, start_url, timeout=60_000)
+        try:
+            safe_goto(page, start_url, timeout=start_page_timeout_ms)
+        except Exception as exc:  # noqa: BLE001 - keep multi-city collection jobs moving.
+            print(f"  skipped start URL: {exc}")
+            continue
         idle_rounds = 0
 
         while len(links) < limit and idle_rounds < 8:

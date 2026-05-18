@@ -56,6 +56,31 @@ python Dataset/olx_collect.py \
 Use `--no-room-only` only when you intentionally want full-house and full-apartment
 listings in the dataset too.
 
+If browser rendering times out but normal HTTP access works, collect listing-card
+data with the fallback collector. It downloads one image per listing card and writes
+the same CSV layout:
+
+```bash
+python Dataset/olx_http_collect.py \
+  --start-url "https://www.olx.in/en-in/bilaspur_g4059465/q-room-rent" \
+  --start-url "https://www.olx.in/en-in/raipur_g4059473/q-room-rent" \
+  --start-url "https://www.olx.in/en-in/bhilai_g4059463/q-room-rent" \
+  --max-images 111 \
+  --start-id 120 \
+  --output-csv Dataset/rooms_dataset_topup.csv \
+  --image-dir Dataset/rooms
+```
+
+Append a compatible top-up CSV into the main training file:
+
+```bash
+python Dataset/merge_room_datasets.py \
+  --base-csv Dataset/rooms_dataset.csv \
+  --append-csv Dataset/rooms_dataset_topup.csv \
+  --output-csv Dataset/rooms_dataset.csv \
+  --output-xlsx Dataset/rooms_dataset.xlsx
+```
+
 The generated CSV is ignored by git because it can become large. Import
 `Dataset/rooms_dataset.csv` into Google Sheets with **File > Import > Upload**,
 or upload the CSV and `Dataset/rooms/` folder to Kaggle for training.

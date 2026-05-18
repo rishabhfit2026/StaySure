@@ -118,3 +118,114 @@ id,img1,img2,img3,img4,img5,location,size_sqft,furnishing_type,cleanliness_score
 117,room117_img1.jpg,,,,,"State Bank Colony Near Sector 7, Bhilai, Chhattisgarh",0,furnished,5.0,"Bed, Parking",2000,Unknown
 118,room118_img1.jpg,room118_img2.jpg,room118_img3.jpg,room118_img4.jpg,room118_img5.jpg,"Smriti Nagar, Bhilai, Chhattisgarh",0,Semi-furnished,5.8,"Kitchen, Parking",3500,1
 119,room119_img1.jpg,,,,,"Agarsen Chowk, Durg-Bhilainagar, Chhattisgarh",0,furnished,5.0,"Fridge, Kitchen, Parking",2000,1
+120,room_120_img1.webp,,,,,"Mannu Chowk, Bilaspur",2000,Unknown,5.0,,1775,2
+121,room_121_img1.webp,,,,,"Raj Kishore Nagar, Bilaspur",660,Unknown,5.0,,4500,2
+122,room_122_img1.webp,,,,,"Bandhwapara, Bilaspur",1000,Unknown,5.0,CCTV,8000,2
+123,room_123_img1.webp,,,,,"Shakuntalam, Bilaspur",0,Unknown,5.0,,2000,Unknown
+124,room_124_img1.webp,,,,,"Sarkanda, Bilaspur",0,Unknown,5.0,,1000,Unknown
+125,room_125_img1.webp,,,,,"Tifra Industrial Area, Bilaspur",1200,Unknown,5.0,,3500,3
+126,room_126_img1.webp,,,,,"Balram Talkies Chowk, Bilaspur",5000,Unknown,5.0,,5000,1
+127,room_127_img1.webp,,,,,"Jarhabhata, Bilaspur",120,Unknown,5.0,,4000,1
+128,room_128_img1.webp,,,,,"Abhishek Vihar, Bilaspur",400,Unknown,5.0,,4500,1
+129,room_129_img1.webp,,,,,"Vinoba Nagar, Bilaspur",0,Unknown,5.0,,6000,Unknown
+130,room_130_img1.webp,,,,,"Sarkanda, Bilaspur",12,Unknown,5.0,,7000,2
+131,room_131_img1.webp,,,,,"Vivekanand Nagar, Bilaspur",1500,Unknown,5.0,,13000,2
+132,room_132_img1.webp,,,,,"Babji Nagar, Bilaspur",100,Unknown,5.0,,3200,1
+133,room_133_img1.webp,,,,,"Bandhwapara, Bilaspur",870,Unknown,5.0,,8000,3
+134,room_134_img1.webp,,,,,"Raj Kishore Nagar, Bilaspur",1200,Unknown,5.0,,4000,2
+135,room_135_img1.webp,,,,,"Abhilasa Colony, Sirgitti",1800,Unknown,5.0,,3500,3
+136,room_136_img1.webp,,,,,"Shivam Vihar, Bilaspur",0,Unknown,5.0,Kitchen,2300,1
+137,room_137_img1.webp,,,,,"Dev Nagar, Koni",20,Unknown,5.0,,2500,2
+138,room_138_img1.webp,,,,,"Dayalband, Bilaspur",150,Unknown,5.0,,2000,1
+139,room_139_img1.webp,,,,,"Lokeshwar, Bilaspur",2500,Unknown,5.0,,3500,1
+140,room_140_img1.webp,,,,,"Mangla, Bilaspur",160,Unknown,5.0,,5200,1
+141,room_141_img1.webp,,,,,"Mannu Chowk, Bilaspur",1000,Unknown,5.0,,7500,2
+142,room_142_img1.webp,,,,,"Raj Kishore Nagar, Bilaspur",1512,Unknown,5.0,,2500,1
+143,room_143_img1.webp,,,,,"Sarkanda, Bilaspur",200,furnished,5.0,Attached Bathroom,5000,1
+144,room_144_img1.webp,,,,,"Gauri Ganesh Colony, Bilaspur",2000,Unknown,5.0,,3200,2
+145,room_145_img1.webp,,,,,"Mangla, Bilaspur",1500,Unknown,5.0,,2500,1
+146,room_146_img1.webp,,,,,"Hamu Nagar, Bilaspur",1200,Unknown,5.0,,6500,1
+147,room_147_img1.webp,,,,,"Ganga Nagar, Bilaspur",800,Unknown,5.0,,6000,1
+148,room_148_img1.webp,,,,,"Sarkanda, Bilaspur",200,Unknown,5.0,,3200,1
+149,room_149_img1.webp,,,,,"Sarkanda, Bilaspur",800,Unknown,5.0,,4000,1
+150,room_150_img1.webp,,,,,"27 Kholi, Bilaspur",0,Unknown,5.0,,4000,1
+151,room_151_img1.webp,,,,,"Agyeya Nagar, Bilaspur",2400,Unknown,5.0,,6000,3
+152,room_152_img1.webp,,,,,"Juna Bilaspur, Bilaspur",250,Unknown,5.0,,4600,1
+153,room_153_img1.webp,,,,,"Sarkanda, Bilaspur",0,Unknown,5.0,,2500,Unknown
+154,room_154_img1.webp,,,,,"Jarhabhata, Bilaspur",440,Unknown,5.0,,2500,1
+155,room_155_img1.webp,,,,,"Tiphara, Tifra",700,Unknown,5.0,,2000,2
+156,room_156_img1.webp,,,,,"Bengali Para, Bilaspur",1500,Unknown,5.0,,6500,1
+157,room_157_img1.webp,,,,,"Nehru Nagar, Bilaspur",300,Unknown,5.0,,3000,1
+158,room_158_img1.webp,,,,,"Godpara, Bilaspur",1200,Unknown,5.0,,3000,1
+159,room_159_img1.webp,,,,,"Gandhi Chowk, Bilaspur",250,Unknown,5.0,,4500,1
+160,room_160_img1.webp,,,,,"Telibandha, Raipur",250,Unknown,5.0,,4500,3
+161,room_161_img1.webp,,,,,"Mowa, Raipur",1000,Unknown,5.0,,5000,1
+162,room_162_img1.webp,,,,,"Nahar Para, Raipur",0,Unknown,5.0,,2700,Unknown
+163,room_163_img1.webp,,,,,"Pandri, Raipur",1200,Unknown,5.0,,3250,2
+164,room_164_img1.webp,,,,,"Rajiv Nagar Colony, Raipur",400,Unknown,5.0,,5000,1
+165,room_165_img1.webp,,,,,"Kabeer Nagar, Raipur",0,Unknown,5.0,,3500,Unknown
+166,room_166_img1.webp,,,,,"Pachpedi Naka, Raipur",1000,furnished,5.0,,4300,1
+167,room_167_img1.webp,,,,,"Kota, Raipur",0,Unknown,5.0,,3500,Unknown
+168,room_168_img1.webp,,,,,"Pachpedi Naka, Raipur",1000,Unknown,5.0,,5000,2
+169,room_169_img1.webp,,,,,"Shyam Nagar, Raipur",700,Unknown,5.0,,6500,1
+170,room_170_img1.webp,,,,,"Shyam Nagar, Raipur",7000,furnished,5.0,AC,150000,Unknown
+171,room_171_img1.webp,,,,,"Danganiya, Raipur",0,Unknown,5.0,,2600,Unknown
+172,room_172_img1.webp,,,,,"Kotwali Chowk, Raipur",0,Unknown,5.0,,2400,Unknown
+173,room_173_img1.webp,,,,,"Matpara, Raipur",650,Unknown,5.0,,6000,2
+174,room_174_img1.webp,,,,,"Deendayal Upadhyaya Nagar, Raipur",0,Unknown,5.0,,3000,Unknown
+175,room_175_img1.webp,,,,,"Avanti Vihar Colony, Raipur",1000,Unknown,5.0,,5000,1
+176,room_176_img1.webp,,,,,"Mowa, Raipur",1300,Unknown,5.0,,7000,1
+177,room_177_img1.webp,,,,,"Kota, Raipur",170,Unknown,5.0,,4700,1
+178,room_178_img1.webp,,,,,"Kanchanjanga Colony, Raipur",0,Unknown,5.0,,5000,Unknown
+179,room_179_img1.webp,,,,,"Mowa, Raipur",250,Unknown,5.0,,3100,1
+180,room_180_img1.webp,,,,,"Pandri, Raipur",100,Unknown,5.0,,2500,1
+181,room_181_img1.webp,,,,,"Pandri, Raipur",1200,Unknown,5.0,,3250,2
+182,room_182_img1.webp,,,,,"Pachpedi Naka, Raipur",650,Unknown,5.0,,5500,2
+183,room_183_img1.webp,,,,,"Mangal Bazar, Raipur",280,Unknown,5.0,,6000,1
+184,room_184_img1.webp,,,,,"Kota, Raipur",5000,Unknown,5.0,,7000,1
+185,room_185_img1.webp,,,,,"Mangal Bazar, Raipur",90,Unknown,5.0,,2900,1
+186,room_186_img1.webp,,,,,"Mahavir Nagar, Raipur",850,Unknown,5.0,,13000,2
+187,room_187_img1.webp,,,,,"Ravi Nagar, Raipur",0,Unknown,5.0,,10000,Unknown
+188,room_188_img1.webp,,,,,"Fafadih, Raipur",150,furnished,5.0,,5500,1
+189,room_189_img1.webp,,,,,"Sunder Nagar, Raipur",0,Unknown,5.0,,3500,Unknown
+190,room_190_img1.webp,,,,,"Professor Colony, Raipur",3750,Unknown,5.0,,6000,2
+191,room_191_img1.webp,,,,,"New Shanti Nagar, Raipur",350,Unknown,5.0,,4500,1
+192,room_192_img1.webp,,,,,"Bhanpuri, Raipur",600,Unknown,5.0,,3800,1
+193,room_193_img1.webp,,,,,"Gopiapara, Raipur",1000,Unknown,5.0,,2800,1
+194,room_194_img1.webp,,,,,"Pandri, Raipur",1200,Unknown,5.0,,3250,2
+195,room_195_img1.webp,,,,,"New Rajendra Nagar, Raipur",500,Unknown,5.0,,7000,2
+196,room_196_img1.webp,,,,,"Avanti Vihar Colony, Raipur",250,furnished,5.0,,8000,1
+197,room_197_img1.webp,,,,,"Kota Colony, Raipur",1000,Unknown,5.0,,7500,1
+198,room_198_img1.webp,,,,,"Mominpara, Raipur",500,Unknown,5.0,,6500,2
+199,room_199_img1.webp,,,,,"Telibandha, Raipur",1000,Unknown,5.0,,1000,1
+200,room_200_img1.webp,,,,,"Supele Market, Bhilai",300,Unknown,5.0,,3500,1
+201,room_201_img1.webp,,,,,"Kripal Nagar, Bhilai",150,Unknown,5.0,,2800,1
+202,room_202_img1.webp,,,,,"Jamul, Bhilai",350,Unknown,5.0,,3500,1
+203,room_203_img1.webp,,,,,"Shanti Nagar, Bhilai",300,Unknown,5.0,,4000,1
+204,room_204_img1.webp,,,,,"Ram nagar, Bhilai",300,Unknown,5.0,,3000,1
+205,room_205_img1.webp,,,,,"Vaishali Nagar, Bhilai",1760,Unknown,5.0,,3500,1
+206,room_206_img1.webp,,,,,"Kripal Nagar, Bhilai",600,Unknown,5.0,,4500,1
+207,room_207_img1.webp,,,,,"Housing Board Colony, Bhilai",350,Unknown,5.0,,3500,1
+208,room_208_img1.webp,,,,,"Ram nagar, Bhilai",500,Unknown,5.0,Kitchen,2500,1
+209,room_209_img1.webp,,,,,"Vaishali Nagar, Bhilai",2000,furnished,5.0,,6000,1
+210,room_210_img1.webp,,,,,"Kripal Nagar, Bhilai",1500,Unknown,5.0,,7800,2
+211,room_211_img1.webp,,,,,"Supele Market, Bhilai",160,Unknown,5.0,,4000,1
+212,room_212_img1.webp,,,,,"Kohka Colony, Bhilai",0,Unknown,5.0,,5500,Unknown
+213,room_213_img1.webp,,,,,"Radhika Nagar, Bhilai",300,Unknown,5.0,Kitchen,3800,1
+214,room_214_img1.webp,,,,,"Hind Nagar, Bhilai",1500,Unknown,5.0,AC,8000,3
+215,room_215_img1.webp,,,,,"Arya Nagar, Bhilai",1000,Unknown,5.0,,3000,3
+216,room_216_img1.webp,,,,,"Arya Nagar, Bhilai",140,Unknown,5.0,,3000,3
+217,room_217_img1.webp,,,,,"Nehru Nagar, Bhilai",0,Unknown,5.0,,3000,Unknown
+218,room_218_img1.webp,,,,,"Kurud, Bhilai",500,Unknown,5.0,,4000,1
+219,room_219_img1.webp,,,,,"Maitri nagar Near Dixit Colony, Bhilai",400,Unknown,5.0,,4000,1
+220,room_220_img1.webp,,,,,"Shanti Nagar, Bhilai",0,Unknown,5.0,,4500,1
+221,room_221_img1.webp,,,,,"Panchsheel Nagar, Bhilai",800,Unknown,5.0,,3000,1
+222,room_222_img1.webp,,,,,"Junwani, Bhilai",3200,Unknown,5.0,,2100,2
+223,room_223_img1.webp,,,,,"Smriti Nagar, Bhilai",80,Unknown,5.0,,3000,1
+224,room_224_img1.webp,,,,,"Smriti Nagar, Bhilai",2000,Unknown,5.0,,2000,1
+225,room_225_img1.webp,,,,,"Awadhpuri Risali, Bhilai",0,Unknown,5.0,,3500,Unknown
+226,room_226_img1.webp,,,,,"Pushpak Nagar, Bhilai",0,Unknown,5.0,,5500,Unknown
+227,room_227_img1.webp,,,,,"Madhuban Nagar, Durg",2200,Unknown,5.0,Kitchen,10500,2
+228,room_228_img1.webp,,,,,"Nehru Nagar, Bhilai",0,Unknown,5.0,,5000,2
+229,room_229_img1.webp,,,,,"Maitri Kunj, Bhilai",300,Unknown,5.0,,8500,1
+230,room_230_img1.webp,,,,,"Smriti Nagar, Bhilai",85459,Unknown,5.0,,3500,1
