@@ -9,6 +9,7 @@ from urllib.parse import urljoin
 import requests
 
 from olx_collect import (
+    IMAGE_EXTENSIONS,
     STAYSURE_COLUMNS,
     Listing,
     estimate_cleanliness,
@@ -28,6 +29,7 @@ CARD_PATTERN = re.compile(
     re.S,
 )
 IMAGE_ID_PATTERN = re.compile(r"https?://apollo\.olx\.in(?::443)?/v1/files/([^/]+)/image", re.I)
+MAX_ROW_IMAGES = 5
 
 
 def parse_args() -> argparse.Namespace:
@@ -40,7 +42,13 @@ def parse_args() -> argparse.Namespace:
         required=True,
         help="OLX search/category URL. Pass multiple times to merge cities.",
     )
-    parser.add_argument("--max-images", type=int, default=120)
+    parser.add_argument("--max-images", type=int, default=120, help="Stop after this many downloaded image references.")
+    parser.add_argument(
+        "--images-per-listing",
+        type=int,
+        default=MAX_ROW_IMAGES,
+        help="Maximum gallery images to keep per listing row.",
+    )
     parser.add_argument("--start-id", type=int, default=1)
     parser.add_argument("--output-csv", type=Path, default=Path("Dataset/rooms_dataset_topup.csv"))
     parser.add_argument("--image-dir", type=Path, default=Path("Dataset/rooms"))
@@ -60,12 +68,14 @@ def main() -> None:
     args.image_dir.mkdir(parents=True, exist_ok=True)
 
     rows = []
+    image_count = 0
     seen_urls = set()
     session = requests.Session()
     session.headers.update({"User-Agent": "Mozilla/5.0"})
+    images_per_listing = max(1, min(args.images_per_listing, MAX_ROW_IMAGES))
 
     for start_url in args.start_url:
-        if len(rows) >= args.max_images:
+        if image_count >= args.max_images:
             break
         print(f"Opening {start_url}", flush=True)
         try:
@@ -76,7 +86,7 @@ def main() -> None:
             continue
 
         for listing in parse_listing_cards(response.text, start_url):
-            if len(rows) >= args.max_images:
+            if image_count >= args.max_images:
                 break
             if listing.url in seen_urls:
                 continue
@@ -89,16 +99,27 @@ def main() -> None:
                 continue
 
             listing_id = args.start_id + len(rows)
-            image_name = download_image(session, listing.image_urls[0], args.image_dir, listing_id)
-            if not image_name:
+            listing.image_urls = collect_detail_image_urls(session, listing, images_per_listing)
+            remaining = args.max_images - image_count
+            image_names = download_images(
+                session,
+                listing.image_urls[: min(images_per_listing, remaining)],
+                args.image_dir,
+                listing_id,
+            )
+            if not any(image_names):
                 continue
-            row = format_row(listing_id, listing, [image_name, "", "", "", ""], include_extra=False)
+            image_count += sum(1 for image_name in image_names if image_name)
+            row = format_row(listing_id, listing, image_names, include_extra=False)
             rows.append(row)
-            print(f"  collected {len(rows)}/{args.max_images}: {listing.title}", flush=True)
+            print(
+                f"  collected {image_count}/{args.max_images} images from row {len(rows)}: {listing.title}",
+                flush=True,
+            )
             time.sleep(args.delay)
 
     write_csv(args.output_csv, rows)
-    print(f"Wrote {len(rows)} rows to {args.output_csv}", flush=True)
+    print(f"Wrote {len(rows)} rows with {image_count} image references to {args.output_csv}", flush=True)
 
 
 def parse_listing_cards(html: str, base_url: str) -> list[Listing]:
@@ -145,24 +166,69 @@ def listing_image_urls(html: str) -> list[str]:
     urls = []
     seen = set()
     for image_id in IMAGE_ID_PATTERN.findall(html):
-        if image_id in seen:
+        if image_id in seen or should_skip_image_id(image_id):
             continue
         seen.add(image_id)
         urls.append(f"https://apollo.olx.in/v1/files/{image_id}/image;s=600x1200;q=80;f=webp")
     return urls
 
 
-def download_image(session: requests.Session, image_url: str, image_dir: Path, listing_id: int) -> str:
-    name = f"room_{listing_id}_img1.webp"
-    path = image_dir / name
+def collect_detail_image_urls(session: requests.Session, listing: Listing, limit: int) -> list[str]:
+    detail_urls = list(listing.image_urls)
     try:
-        response = session.get(image_url, timeout=20)
+        response = session.get(listing.url, timeout=30)
         response.raise_for_status()
     except requests.RequestException as exc:
-        print(f"  image skipped: {exc}", flush=True)
-        return ""
-    path.write_bytes(response.content)
-    return name
+        print(f"  detail page skipped: {exc}", flush=True)
+    else:
+        detail_urls.extend(listing_image_urls(response.text))
+    return dedupe_urls(detail_urls)[:limit]
+
+
+def should_skip_image_id(image_id: str) -> bool:
+    lowered = image_id.lower()
+    return lowered.startswith("alias-") or "-in" not in lowered
+
+
+def dedupe_urls(urls: list[str]) -> list[str]:
+    deduped = []
+    seen = set()
+    for url in urls:
+        image_id = url.split("/v1/files/", 1)[-1].split("/image", 1)[0]
+        if image_id in seen:
+            continue
+        seen.add(image_id)
+        deduped.append(url)
+    return deduped
+
+
+def download_images(
+    session: requests.Session,
+    image_urls: list[str],
+    image_dir: Path,
+    listing_id: int,
+) -> list[str]:
+    names = ["", "", "", "", ""]
+    for index, image_url in enumerate(image_urls[:MAX_ROW_IMAGES], start=1):
+        suffix = image_suffix(image_url)
+        name = f"room_{listing_id}_img{index}{suffix}"
+        path = image_dir / name
+        try:
+            response = session.get(image_url, timeout=20)
+            response.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"  image skipped: {exc}", flush=True)
+            continue
+        path.write_bytes(response.content)
+        names[index - 1] = name
+    return names
+
+
+def image_suffix(url: str) -> str:
+    suffix = Path(url.split("?", 1)[0].split(";", 1)[0]).suffix.lower()
+    if suffix in IMAGE_EXTENSIONS:
+        return suffix
+    return ".webp"
 
 
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:

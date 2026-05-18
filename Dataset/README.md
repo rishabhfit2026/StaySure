@@ -57,8 +57,8 @@ Use `--no-room-only` only when you intentionally want full-house and full-apartm
 listings in the dataset too.
 
 If browser rendering times out but normal HTTP access works, collect listing-card
-data with the fallback collector. It downloads one image per listing card and writes
-the same CSV layout:
+data with the fallback collector. It opens each listing page over HTTP and fills up
+to five gallery images from the same home/listing into `img1` through `img5`:
 
 ```bash
 python Dataset/olx_http_collect.py \
@@ -66,6 +66,7 @@ python Dataset/olx_http_collect.py \
   --start-url "https://www.olx.in/en-in/raipur_g4059473/q-room-rent" \
   --start-url "https://www.olx.in/en-in/bhilai_g4059463/q-room-rent" \
   --max-images 111 \
+  --images-per-listing 5 \
   --start-id 120 \
   --output-csv Dataset/rooms_dataset_topup.csv \
   --image-dir Dataset/rooms
