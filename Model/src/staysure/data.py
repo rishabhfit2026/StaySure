@@ -136,6 +136,10 @@ def normalize_dataframe(df: pd.DataFrame, require_target: bool = True) -> pd.Dat
         else:
             df[column] = df[column].fillna(df[column].median())
 
+    if "size_sqft" in df.columns:
+        p99 = df["size_sqft"].quantile(0.99)
+        df["size_sqft"] = df["size_sqft"].clip(upper=max(p99, 5000))
+
     df["bathroom_attached"] = df["bathroom_attached"].map(_to_binary).astype("float32")
 
     if require_target:
@@ -176,13 +180,20 @@ def load_room_image(value: str, image_root: Path, image_size: int) -> np.ndarray
     if value.startswith("http://") or value.startswith("https://"):
         return _load_url_image(value, image_size)
 
-    candidate_paths = []
     raw_path = Path(value)
+    stem = raw_path.stem
+    extensions = [raw_path.suffix] + [
+        extension for extension in (".jpg", ".webp", ".png", ".jpeg") if extension != raw_path.suffix
+    ]
+
+    candidate_paths = []
     if raw_path.is_absolute():
-        candidate_paths.append(raw_path)
+        for extension in extensions:
+            candidate_paths.append(raw_path.with_suffix(extension))
     else:
-        candidate_paths.append(image_root / raw_path)
-        candidate_paths.append(image_root / raw_path.name)
+        for extension in extensions:
+            candidate_paths.append(image_root / raw_path.with_suffix(extension))
+            candidate_paths.append(image_root / (stem + extension))
 
     for path in candidate_paths:
         if path.exists():

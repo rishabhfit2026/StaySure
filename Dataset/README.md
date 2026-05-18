@@ -69,7 +69,8 @@ python Dataset/olx_http_collect.py \
   --images-per-listing 5 \
   --start-id 120 \
   --output-csv Dataset/rooms_dataset_topup.csv \
-  --image-dir Dataset/rooms
+  --image-dir Dataset/rooms \
+  --dedupe-image-dir Dataset/rooms
 ```
 
 Append a compatible top-up CSV into the main training file:
@@ -78,6 +79,16 @@ Append a compatible top-up CSV into the main training file:
 python Dataset/merge_room_datasets.py \
   --base-csv Dataset/rooms_dataset.csv \
   --append-csv Dataset/rooms_dataset_topup.csv \
+  --output-csv Dataset/rooms_dataset.csv \
+  --output-xlsx Dataset/rooms_dataset.xlsx
+```
+
+Clean required metadata fields after merging so model inputs do not contain blank
+`bhk`, `amenities`, `location`, or zero `size_sqft` values:
+
+```bash
+python Dataset/clean_room_dataset.py \
+  --input-csv Dataset/rooms_dataset.csv \
   --output-csv Dataset/rooms_dataset.csv \
   --output-xlsx Dataset/rooms_dataset.xlsx
 ```
